@@ -30,3 +30,5 @@ optional arguments:
 ```
 kyubi -a https://127.0.0.1/resources/images/users/profile/profile.png
 ```
+
+<p align="center"><img src="https://i.postimg.cc/NfvjVmJj/Capture.jpg" /></p>
