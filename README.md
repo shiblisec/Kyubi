@@ -9,7 +9,7 @@ git clone https://github.com/shibli2700/Kyubi.git
 python3 setup.py install
 ```
 
-## Usage
+## Options
 ```
 usage: kyubi [-h] [-v] [-d WLIST] [-a] url
 
@@ -24,3 +24,9 @@ optional arguments:
   -d WLIST    wordlist path
   -a          append segment in the end
   ```
+
+## Usage
+
+```
+kyubi -a https://127.0.0.1/resources/images/users/profile/profile.png
+```
