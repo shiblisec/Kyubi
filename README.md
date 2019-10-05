@@ -1,3 +1,5 @@
+[![made with python](https://img.shields.io/badge/made%20in-python-red)](https://img.shields.io/badge/made%20in-python-red)
+[![author](https://img.shields.io/badge/author-shibli2700-blue)](https://img.shields.io/badge/author-shibli2700-blue)
 ## Kyubi
 
 A tool to discover and exploit Nginx alias traversal misconfiguration, the tool can bruteforce the URL path recursively to find out hidden files and directories.
