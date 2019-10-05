@@ -65,6 +65,5 @@ def main():
 
 
 if __name__ == '__main__':
-    title = pyfiglet.figlet_format("Kyubi")
-    sys.stdout.write(title)
+    print(pyfiglet.figlet_format("Kyubi"))
     main()
