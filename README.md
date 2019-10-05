@@ -32,7 +32,7 @@ optional arguments:
 kyubi -v https://127.0.0.1/resources/images/users/profile/profile.png
 ```
 
-#Future Addition
+## Future Addition
 
 * Brute forcing with filenames and directories.
 * Web Interface.
