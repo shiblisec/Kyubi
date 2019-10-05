@@ -5,6 +5,7 @@ except ImportError:
 import sys
 import argparse as ag
 import requests as rq
+import pyfiglet
 
 argparser = ag.ArgumentParser(description="This is a nginx traversal tool")
 argparser.add_argument("url", type=str, help="URL of the target")
@@ -50,4 +51,6 @@ def main():
 
 
 if __name__ == '__main__':
+    title = pyfiglet.figlet_format("Kyubi")
+    sys.stdout.write(title)
     main()
