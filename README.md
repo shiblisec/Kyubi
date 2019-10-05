@@ -2,7 +2,7 @@
 [![author](https://img.shields.io/badge/author-shibli2700-blue)](https://img.shields.io/badge/author-shibli2700-blue)
 ## Kyubi
 
-A tool to discover and exploit Nginx alias traversal misconfiguration, the tool can bruteforce the URL path recursively to find out hidden files and directories.
+A tool to discover Nginx alias traversal misconfiguration, read more [https://www.acunetix.com/vulnerabilities/web/path-traversal-via-misconfigured-nginx-alias/](https://www.acunetix.com/vulnerabilities/web/path-traversal-via-misconfigured-nginx-alias/)
 
 <p align="center"><img src="https://i.postimg.cc/NfvjVmJj/Capture.jpg" /></p>
 
