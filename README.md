@@ -13,9 +13,9 @@ python3 setup.py install
 
 ## Options
 ```
-usage: kyubi [-h] [-v] [-d WLIST] [-a] url
+usage: kyubi [-h] [-v] [-a] url
 
-This is a nginx traversal tool
+This tool checks nginx alias traversal misconfiguration.
 
 positional arguments:
   url         URL of the target
@@ -23,7 +23,6 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
   -v          increase verbosity
-  -d WLIST    wordlist path
   -a          append segment in the end
   ```
 
@@ -32,3 +31,8 @@ optional arguments:
 ```
 kyubi -v https://127.0.0.1/resources/images/users/profile/profile.png
 ```
+
+#Future Addition
+
+* Brute forcing with filenames and directories.
+* Web Interface.
