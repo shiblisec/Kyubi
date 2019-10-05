@@ -2,6 +2,8 @@
 
 A tool to discover and exploit Nginx alias traversal misconfiguration, the tool can bruteforce the URL path recursively to find out hidden files and directories.
 
+<p align="center"><img src="https://i.postimg.cc/NfvjVmJj/Capture.jpg" /></p>
+
 ## Installation
 
 ```
@@ -28,7 +30,5 @@ optional arguments:
 ## Usage
 
 ```
-kyubi -a https://127.0.0.1/resources/images/users/profile/profile.png
+kyubi -v https://127.0.0.1/resources/images/users/profile/profile.png
 ```
-
-<p align="center"><img src="https://i.postimg.cc/NfvjVmJj/Capture.jpg" /></p>
