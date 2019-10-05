@@ -7,8 +7,8 @@ A tool to discover and exploit Nginx alias traversal misconfiguration, the tool 
 ## Installation
 
 ```
-git clone https://github.com/shibli2700/Kyubi.git
-python3 setup.py install
+$ git clone https://github.com/shibli2700/Kyubi.git
+$ sudo python3 setup.py install
 ```
 
 ## Options
@@ -29,7 +29,7 @@ optional arguments:
 ## Usage
 
 ```
-kyubi -v https://127.0.0.1/resources/images/users/profile/profile.png
+$ kyubi -v https://127.0.0.1/resources/images/users/profile/profile.png
 ```
 
 ## Future Addition
