@@ -19,7 +19,7 @@ def make_a_request (url):
     try:
         resp = rq.get(url, verify=True)
     except Exception as e:
-        resp = 500
+        resp.status_code = 500
     return str(resp.status_code)
 
 def main():
