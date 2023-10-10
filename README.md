@@ -10,7 +10,9 @@ A tool to discover Nginx alias traversal misconfiguration, read more [https://ww
 
 ```
 git clone https://github.com/shibli2700/Kyubi.git
+cd /Kyubi
 sudo python3 setup.py install
+pip install .
 ```
 
 ## Options
