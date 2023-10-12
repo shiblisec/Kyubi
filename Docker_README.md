@@ -12,7 +12,7 @@
 
 ## Introduction
 
-This directory contains the necessary files and instructions to build and run a Docker image for [Kyubi]. 
+This directory contains the necessary files and instructions to build and run a Docker image for Kyubi. 
 
 ## Prerequisites
 
