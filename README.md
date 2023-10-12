@@ -8,12 +8,23 @@ A tool to discover Nginx alias traversal misconfiguration, read more [https://ww
 
 ## Installation
 
+### OPTION 1: 
+
 ```
 git clone https://github.com/shibli2700/Kyubi.git
 cd /Kyubi
 sudo python3 setup.py install
 pip install .
 ```
+
+### OPTION 2: Pulling the Docker Image from Docker Hub
+
+You can pull the Docker image from Docker Hub using the following command:
+
+```bash
+docker pull saydocerr/kyubi
+```
+
 
 ## Options
 ```
@@ -29,6 +40,9 @@ optional arguments:
   -v          increase verbosity
   -a          append segment in the end
   ```
+
+ 
+
 
 ## Usage
 
