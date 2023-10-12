@@ -65,8 +65,8 @@ Adding  `-i` and `-t` options will make it interactive.
 
 example: 
 
-    ```bash
-    docker run -it kyubi:1.0
-    ```
+```bash
+docker run -it kyubi:1.0
+```
 
  Here the image is named as **kyubi** and is tagged as **1.0**
