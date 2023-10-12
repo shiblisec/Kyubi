@@ -1,20 +1,14 @@
 [![made with python](https://img.shields.io/badge/made%20in-python-red)](https://img.shields.io/badge/made%20in-python-red)
-[![made with Docker](https://img.shields.io/badge/made%20in-python-red)](https://img.shields.io/badge/made%20in-python-blue)
-[![author](https://img.shields.io/badge/author-shibli2700-blue)](https://img.shields.io/badge/author-saami97-green)
+[![made with Docker](https://img.shields.io/badge/made%20with-docker-blue)](https://img.shields.io/badge/made%20in-python-blue)
+[![author](https://img.shields.io/badge/author-saami97-green)](https://img.shields.io/badge/author-saami97-green)
 
 ## Kyubi-Dockerized
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Using Google Cloud Shell for Docker](#using-google-cloud-shell-for-docker)
 - [Building the Docker Image](#building-the-docker-image)
 - [Running the Docker Image](#running-the-docker-image)
-- [Pulling the Docker Image from Docker Hub](#pulling-the-docker-image-from-docker-hub)
-
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -33,7 +27,7 @@ Experiment with Docker in Google Cloud Shell without needing to install Docker o
 
 1. Navigate to [Google Cloud Shell](https://console.cloud.google.com/cloudshell).
 
-2. Use the provided terminal to run Docker commands and experiment with Docker containers.
+2. Use the provided terminal to run the below given Docker commands and experiment with Docker containers.
 
 ## Building the Docker Image
 
@@ -43,7 +37,6 @@ To build the Docker image locally, follow these steps:
 
     ```bash
     git clone https://github.com/saami97/Kyubi.git
-    cd Dockerized-Kyubi/
     ```
 
 2. Build the Docker image using the provided Dockerfile:
@@ -64,32 +57,16 @@ To build the Docker image locally, follow these steps:
 To run the Docker image locally, use the following command:
 
 ```bash
-docker run -it your-image-name
+docker run -it your-image-name:tag
 ```
 
-Replace `your-image-name` with the name of the Docker image you specified during the build process.
+Replace `your-image-name` and `tag` with the name of the Docker image and the tag that you specified during the build process respectively.
 Adding  `-i` and `-t` options will make it interactive.
 
-## Pulling the Docker Image from Docker Hub
+example: 
 
-You can pull the Docker image from Docker Hub using the following command:
+    ```bash
+    docker run -it kyubi:1.0
+    ```
 
-```bash
-docker pull username/image-name:tag
-```
-
-Replace `username` with the Docker Hub username, `image-name` with the name of the Docker image, and `tag` with the desired version or tag.
-
-
-
-## Contributing
-
-If you'd like to contribute to this project, please follow the [Contributing Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [LICENSE](LICENSE) - see the LICENSE file for details.
-
----
-
-Feel free to customize the placeholders and sections as needed for your specific project.
+ Here the image is named as **kyubi** and is tagged as **1.0**
