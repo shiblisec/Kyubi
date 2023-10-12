@@ -1,5 +1,6 @@
 [![made with python](https://img.shields.io/badge/made%20in-python-red)](https://img.shields.io/badge/made%20in-python-red)
 [![author](https://img.shields.io/badge/author-shibli2700-blue)](https://img.shields.io/badge/author-shibli2700-blue)
+[![co-author](https://img.shields.io/badge/co_author-saami97-green)](https://img.shields.io/badge/author-shibli2700-green)
 ## Kyubi
 
 A tool to discover Nginx alias traversal misconfiguration, read more [https://www.acunetix.com/vulnerabilities/web/path-traversal-via-misconfigured-nginx-alias/](https://www.acunetix.com/vulnerabilities/web/path-traversal-via-misconfigured-nginx-alias/)
