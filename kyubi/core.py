@@ -24,10 +24,12 @@ payloads = ["../", "../../", "../../../../../../../../../../../"]
 def make_a_request (url):
     resp = 500
     try:
-        resp = rq.get(url, verify=True).status_code
+        resp = rq.get(url, verify=True)
+        status = resp.status_code
+        content_length_response = len(resp.content)
     except Exception as e:
         resp = 500
-    return str(resp)
+    return str(status), str(content_length_response)
 
 def main():
     parser = urlparse(args.url)
@@ -46,21 +48,25 @@ def main():
             _x = ""
         for payload in payloads:
             _url = "{}://{}{}{}{}".format(parser.scheme, parser.netloc, _str, payload, _x)
-            statcode = make_a_request(_url)
+            resp = make_a_request(_url)
+            statcode = resp[0]
+            content_length = resp[1]
             if(args.v):
-                sys.stdout.write("{0} [{1}]\n".format(_url, colored(statcode, 'green') if statcode in valid else colored(statcode, 'red')))
+                sys.stdout.write("{0} [{1}] [{2}]\n".format(_url, colored(statcode, 'green'), content_length if statcode in valid else colored(statcode, 'red')))
             else:
                 if(statcode in valid):
-                    sys.stdout.write("{0} [{1}]\n".format(_url, colored(statcode, 'green')))
+                    sys.stdout.write("{0} [{1}] [{2}]\n".format(_url, colored(statcode, 'green'), content_length))
     for i in range(0, len(segments)-1):
         for payload in payloads:
             _url = parser.scheme+"://"+parser.netloc+"/" + '/'.join(segments[0:i+1]) + payload + '/'.join(segments[i+1:len(segments)])
-            statcode = make_a_request(_url)
+            resp = make_a_request(_url)
+            statcode = resp[0]
+            content_length = resp[1]
             if(args.v):
-                sys.stdout.write("{} [{}]\n".format(_url, colored(statcode, 'green') if statcode in valid else colored(statcode, 'red')))
+                sys.stdout.write("{} [{}] [{}]\n".format(_url, colored(statcode, 'green'), content_length if statcode in valid else colored(statcode, 'red')))
             else:
                 if(statcode in valid):
-                    sys.stdout.write("{0} [{1}]\n".format(_url, colored(statcode, 'green')))
+                    sys.stdout.write("{0} [{1}] [{2}]\n".format(_url, colored(statcode, 'green'), content_length))
 
 
 
