@@ -20,10 +20,15 @@ pip install .
 
 ### OPTION 2: Pulling the Docker Image from Docker Hub
 
-You can pull the Docker image from Docker Hub using the following command:
+You can pull the Docker image from Docker Hub and running it locally using the following command:
 
 ```bash
 docker pull saydocerr/kyubi
+```
+
+```bash
+docker run -it saydocerr/kyubi
+app_user@79f2534296df:~$ kyubi
 ```
 
 
