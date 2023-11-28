@@ -28,7 +28,6 @@ docker pull saydocerr/kyubi
 
 ```bash
 docker run -it saydocerr/kyubi
-app_user@79f2534296df:~$ kyubi
 ```
 
 
